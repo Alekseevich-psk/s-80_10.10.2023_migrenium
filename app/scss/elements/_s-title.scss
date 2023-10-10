@@ -1,0 +1,15 @@
+.s-title {
+    font-family: 'Oswald', Arial, Helvetica, sans-serif;
+    font-size: 50px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 130%;
+
+    @media(max-width: 960px) {
+        font-size: 36px;
+    }
+
+    @media(max-width: 768px) {
+        font-size: 32px;
+    }
+}

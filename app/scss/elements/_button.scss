@@ -1,0 +1,38 @@
+.button {
+    cursor: pointer;
+    background-color: $active;
+    color: $white;
+    font-family: 'Oswald', Arial, Helvetica, sans-serif;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 1;
+    transition: $transition;
+    padding: 14px 46px 18px;
+    border-radius: 60px;
+    border: 1px solid transparent;
+
+    &:hover {
+        background-color: $activeHover;
+    }
+
+    &:active {
+        background-color: $activeVisited;
+    }
+
+    &--white {
+        background-color: $white;
+        color: $black;
+
+        &:hover {
+            background-color: $activeHover;
+            color: $white;
+        }
+    
+        &:active {
+            background-color: $activeVisited;
+            color: $white;
+        }
+    }
+}

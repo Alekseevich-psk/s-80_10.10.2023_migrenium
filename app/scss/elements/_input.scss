@@ -1,0 +1,8 @@
+.input {
+    color: $black;
+
+
+    &:hover, &:active {
+        border: 1px solid $active;
+    }
+}
