@@ -1,9 +1,92 @@
 .main {
+    @include section();
+
+    &__container {
+        position: relative;
+        padding: 0 70px;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center center;
+        background-image: url('../images/bg-main.png');
+        border-radius: $brRadiusForWrapper;
+
+        @media(max-width: 960px) {
+            background-position: 16% center;
+        }
+
+        @media(max-width: 768px) {
+            padding: 0 30px;
+            background-position: 30% center;
+        }
+    } 
+
+    &__wrapper {
+        position: relative;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        min-height: 100vh;
+        overflow: hidden;
+
+        &:after {
+            position: absolute;
+            content: "";
+            z-index: 1;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 460px;
+            height: 220px;
+            background-repeat: no-repeat;
+            background-size: contain;
+            background-position-y: 4px;
+            background-image: url('../images/el-main.png');
+        }
+
+        @media(max-height: 620px) {
+            min-height: 620px;
+        }
+
+        @media(max-width: 768px) {
+            width: 100%;
+
+            &:after {
+                width: 260px;
+                height: 130px;
+            }
+        }
+    }
 
     &__inner {
+
+        @media(max-width: 768px) {
+            width: 100%;
+        }
+    }
+
+    &__title {
         font-family: "Oswald", Arial, Helvetica, sans-serif;
         font-size: 90px;
+        font-weight: 600;
         line-height: 120%;
+        color: $active;
+
+        span {
+            display: block;
+            text-align: right;
+
+            @media(max-width: 768px)  {
+                text-align: left;
+            }
+        }
+
+        @media(max-width: 960px) {
+            font-size: 32px;
+        }
+
+        @media(max-width: 768px) {
+            font-size: 28px;
+        }
     }
-    
+
 }
