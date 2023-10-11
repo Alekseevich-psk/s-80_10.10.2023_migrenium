@@ -2,6 +2,7 @@
     cursor: pointer;
     background-color: $active;
     color: $white;
+    display: inline-block;
     font-family: 'Oswald', Arial, Helvetica, sans-serif;
     font-size: 24px;
     font-style: normal;
@@ -12,6 +13,11 @@
     padding: 14px 46px 18px;
     border-radius: 60px;
     border: 1px solid transparent;
+
+    @media(max-width: 768px) {
+        font-size: 18px;
+        padding: 14px 32px 18px;
+    }
 
     &:hover {
         background-color: $activeHover;

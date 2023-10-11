@@ -1,14 +1,10 @@
 .about-product {
     position: relative;
-    @include section();
-    padding-top: 80px;
+    max-width: 2400px;
+    padding: 90px 0;
 
-    @media (max-width: 1280px) {
-        padding-top: 80px;
-    }
-
-    @media (max-width: 768px) {
-        padding-top: 80px;
+    @media (max-width: 960px) {
+        padding: 40px 0;
     }
 
     &:before {
@@ -25,11 +21,20 @@
         content: "";
         width: 60%;
         height: 90%;
-        background-image: url('../images/spidometr.png');
+        background-image: url('../images/spidometr.svg');
         background-position: center center;
         background-repeat: no-repeat;
         background-size: contain;
         transform: translate(-50%, -50%);
+    }
+
+    @media(max-width: 960px) {
+
+        &:after {
+            top: 350px;
+            width: 90%;
+            height: 200px;
+        }
     }
 
     &__wrapper,
@@ -39,6 +44,11 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
+
+        @media(max-width: 960px) {
+            flex-direction: column;
+            align-items: start;
+        }
     }
 
     &__sub-wrapper {
@@ -48,9 +58,14 @@
     &__s-title {
         max-width: 720px;
         margin-right: 40px;
+
+        @media(max-width: 960px) {
+            margin-right: 0;
+        }
     }
 
     &__item {
+        max-width: 572px;
         font-size: 36px;
         font-style: normal;
         font-weight: 500;
@@ -64,10 +79,27 @@
         &:last-child {
             margin-bottom: 0;
         }
+
+        @media(max-width: 960px) {
+            width: 100%;
+            max-width: none;
+            padding: 20px;
+            border-radius: 20px;
+            margin-bottom: 12px;
+        }
+
+        @media(max-width: 768px) {
+            font-size: 20px;
+            font-weight: 500;
+        }
     }
 
     &__inner {
         width: 50%;
+
+        @media(max-width: 960px) {
+            width: 100%;
+        }
     }
 
     &__picture {
@@ -75,15 +107,35 @@
         height: 720px;
         width: 100%;
 
+        @media(max-width: 960px) {
+            height: 440px;
+        }
+
+        @media(max-width: 768px) {
+            height: 320px;
+        }
+
 
         img {
             position: absolute;
             top: 0;
             right: 0;
             left: auto;
-            min-width: 200%;
+            min-width: 180%;
             height: 100%;
             object-fit: contain;
+        }
+
+        @media(max-width: 1280px) {
+            img {
+                min-width: 150%;
+            }
+        }
+    }
+
+    &__btn {
+        @media(max-width: 960px) {
+            padding-top: 20px;
         }
     }
 

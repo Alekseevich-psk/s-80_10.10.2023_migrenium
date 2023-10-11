@@ -1,7 +1,7 @@
 .main {
     position: relative;
-    @include section();
     height: 100vh;
+    max-width: 2400px;
 
     @media(max-height: 620px) {
         height: 620px;
@@ -20,25 +20,20 @@
         position: absolute;
         content: "";
         z-index: 1;
-        bottom: 40px;
+        bottom: 20px;
         left: 50%;
         transform: translateX(-50%);
         width: 460px;
         height: 220px;
         background-repeat: no-repeat;
         background-size: contain;
-        background-position-y: 4px;
+        background-position:bottom center;
         background-image: url('../images/el-main.png');
     }
 
-    @media (max-width: 1280px) {
+    @media (max-width: 960px) {
         &:after {
-            bottom: 20px;
-        }
-    }
-
-    @media (max-width: 768px) {
-        &:after {
+            width: 80%;
             bottom: 10px;
         }
     }
@@ -46,13 +41,19 @@
     &__wrapper {
         height: 100%;
         position: relative;
+        padding: 0 120px;
         z-index: 2;
         display: flex;
         justify-content: flex-end;
         align-items: center;
 
+        @media(max-width: 1280px) {
+            padding: 0 40px;
+        }
+
         @media(max-width: 768px) {
             width: 100%;
+            padding: 0 20px;
 
             &:after {
                 width: 260px;
