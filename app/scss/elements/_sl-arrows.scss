@@ -1,12 +1,14 @@
 .sl-arrows {
     user-select: none;
-    display: block;
+    display: flex;
+    justify-content: space-between;
     width: 220px;
     height: 100px;
     z-index: 10;
 
-    @media(max-width: 960px) {
-        display: none;
+    @media(max-width: 960px)  {
+        width: 150px;
+        height: 70px;
     }
 
     &__arrow {
@@ -24,6 +26,11 @@
         &:first-child {
             margin-right: 6px;
             transform: rotate(180deg);
+        }
+
+        @media(max-width: 960px) {
+            width: 70px;
+            height: 70px;
         }
     }
 
