@@ -1,3 +1,76 @@
 .reviews {
-    
+    padding: 90px 0;
+    background-position: center center;
+    background-size: cover;
+    background-image: url('../images/bg-reviews.jpg');
+
+    $padding: 50px;
+    $paddingMobile: 30px;
+
+    @media(max-width: 1280px) {
+        padding: 60px 0;
+    }
+
+    &__sub-wrapper {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 64px;
+    }
+
+    &__slider {
+        overflow: hidden;
+    }
+
+    &__slide {
+        height: auto;
+        border-radius: 30px;
+        padding: $padding;
+        font-size: 26px;
+        font-style: normal;
+        font-weight: 300;
+        line-height: 130%;
+        background-color: $white;
+        padding-bottom: 200px;
+
+        @media(max-width: 960px) {
+            padding: $paddingMobile;
+            padding-bottom: 180px;
+        }
+    }
+
+    &__ico {
+        position: absolute;
+        bottom: $padding;
+        right: $padding;
+        width: 120px;
+        height: 120px;
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+        
+        @media(max-width: 960px) {
+            bottom: $paddingMobile;
+            right: $paddingMobile;
+        }
+    }
+
+    &__author {
+        position: absolute;
+        bottom: $padding;
+        left: $padding;
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+        letter-spacing: 1;
+
+        @media(max-width: 960px) {
+            bottom: $paddingMobile;
+            left: $paddingMobile;
+        }
+    }
 }

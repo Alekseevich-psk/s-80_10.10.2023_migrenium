@@ -1,27 +1,23 @@
 (function () {
-    const test = document.querySelector(".test");
-    if (!test) return;
+    const reviews = document.querySelector(".reviews");
+    if (!reviews) return;
 
-    new Swiper(".test__slider", {
+    new Swiper(".reviews__slider", {
         spaceBetween: 30,
         navigation: {
-            nextEl: ".test .sl-arrows__arrow--next",
-            prevEl: ".test .sl-arrows__arrow--prev",
-        },
-        pagination: {
-            el: ".swiper-pagination",
-            clickable: true,
+            nextEl: ".reviews .sl-arrows__arrow--next",
+            prevEl: ".reviews .sl-arrows__arrow--prev",
         },
         breakpoints: {
             320: {
                 slidesPerView: 1.1,
                 spaceBetween: 20,
             },
-            768: {
-                slidesPerView: 2.2,
+            960: {
+                slidesPerView: 2.1,
                 spaceBetween: 30,
             },
-            980: {
+            1280: {
                 slidesPerView: 3,
             },
         },
