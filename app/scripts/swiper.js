@@ -23,3 +23,26 @@
         },
     });
 })();
+
+(function () {
+    const price = document.querySelector(".price");
+    if (!price) return;
+
+    new Swiper(".price__slider", {
+        spaceBetween: 30,
+        navigation: {
+            nextEl: ".price .sl-arrows__arrow--next",
+            prevEl: ".price .sl-arrows__arrow--prev",
+        },
+        breakpoints: {
+            320: {
+                slidesPerView: 1.1,
+                spaceBetween: 20,
+            },
+            960: {
+                slidesPerView: 3,
+                spaceBetween: 30,
+            }
+        },
+    });
+})();
