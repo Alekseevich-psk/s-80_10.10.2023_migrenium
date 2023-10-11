@@ -1,51 +1,55 @@
 .main {
+    position: relative;
     @include section();
+    height: 100vh;
+
+    @media(max-height: 620px) {
+        height: 620px;
+    }
 
     &__container {
-        position: relative;
-        padding: 0 70px;
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-position: center center;
+        height: 100%;
+    }
+
+    &:before {
+        @include bgImage();
         background-image: url('../images/bg-main.png');
-        border-radius: $brRadiusForWrapper;
+    }
 
-        @media(max-width: 960px) {
-            background-position: 16% center;
-        }
+    &:after {
+        position: absolute;
+        content: "";
+        z-index: 1;
+        bottom: 40px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 460px;
+        height: 220px;
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position-y: 4px;
+        background-image: url('../images/el-main.png');
+    }
 
-        @media(max-width: 768px) {
-            padding: 0 30px;
-            background-position: 30% center;
+    @media (max-width: 1280px) {
+        &:after {
+            bottom: 20px;
         }
-    } 
+    }
+
+    @media (max-width: 768px) {
+        &:after {
+            bottom: 10px;
+        }
+    }
 
     &__wrapper {
+        height: 100%;
         position: relative;
+        z-index: 2;
         display: flex;
         justify-content: flex-end;
         align-items: center;
-        min-height: 100vh;
-        overflow: hidden;
-
-        &:after {
-            position: absolute;
-            content: "";
-            z-index: 1;
-            bottom: 0;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 460px;
-            height: 220px;
-            background-repeat: no-repeat;
-            background-size: contain;
-            background-position-y: 4px;
-            background-image: url('../images/el-main.png');
-        }
-
-        @media(max-height: 620px) {
-            min-height: 620px;
-        }
 
         @media(max-width: 768px) {
             width: 100%;
@@ -58,7 +62,6 @@
     }
 
     &__inner {
-
         @media(max-width: 768px) {
             width: 100%;
         }
@@ -80,12 +83,12 @@
             }
         }
 
-        @media(max-width: 960px) {
-            font-size: 32px;
+        @media(max-width: 1280px) {
+            font-size: 54px;
         }
 
-        @media(max-width: 768px) {
-            font-size: 28px;
+        @media(max-width: 960px) {
+            font-size: 32px;
         }
     }
 

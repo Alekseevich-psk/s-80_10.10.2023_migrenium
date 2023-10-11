@@ -1,5 +1,6 @@
 @import "./mixin/fonts";
 @import "./mixin/section";
+@import "./mixin/bg-image";
 
 @import './normilize/reset';
 @import "./fonts";
@@ -16,6 +17,7 @@
 @import "./elements/sl-arrows";
 
 @import "./sections/main";
+@import "./sections/about-product";
 @import "./sections/document";
 @import "./sections/reviews";
 @import "./sections/info";

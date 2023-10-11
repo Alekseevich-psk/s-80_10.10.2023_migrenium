@@ -1,0 +1,93 @@
+.about-product {
+    position: relative;
+    @include section();
+    padding-top: 80px;
+
+    @media (max-width: 1280px) {
+        padding-top: 80px;
+    }
+
+    @media (max-width: 768px) {
+        padding-top: 80px;
+    }
+
+    &:before {
+        @include bgImage();
+        height: calc(100% - 0px);
+        background: linear-gradient(180deg, #EEE 13.66%, rgba(217, 217, 223, 0.13) 87.41%);
+    }
+
+    &:after {
+        position: absolute;
+        z-index: 2;
+        top: 50%;
+        left: 50%;
+        content: "";
+        width: 60%;
+        height: 90%;
+        background-image: url('../images/spidometr.png');
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: contain;
+        transform: translate(-50%, -50%);
+    }
+
+    &__wrapper,
+    &__sub-wrapper {
+        position: relative;
+        z-index: 3;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__sub-wrapper {
+        margin-bottom: 40px;
+    }
+
+    &__s-title {
+        max-width: 720px;
+        margin-right: 40px;
+    }
+
+    &__item {
+        font-size: 36px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 120%;
+        background-color: $white;
+        padding: 32px;
+        border-radius: 30px;
+        margin-bottom: 38px;
+        color: $active;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+
+    &__inner {
+        width: 50%;
+    }
+
+    &__picture {
+        position: relative;
+        height: 720px;
+        width: 100%;
+
+
+        img {
+            position: absolute;
+            top: 0;
+            right: 0;
+            left: auto;
+            min-width: 200%;
+            height: 100%;
+            object-fit: contain;
+        }
+    }
+
+    &__button {
+        white-space: nowrap;
+    }
+}
