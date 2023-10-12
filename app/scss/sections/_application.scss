@@ -1,0 +1,153 @@
+.application {
+
+    &__wrapper {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+
+    &__inner {
+        position: relative;
+        height: auto;
+        border-radius: 30px;
+        background: rgba(248, 248, 248, 0.90);
+        padding: 60px 50px;
+        width: 48%;
+
+        @media(max-width: 960px) {
+            border-radius: 20px;
+        }
+
+        &--desc {
+
+            &:before {
+                position: absolute;
+                content: "";
+                width: 90px;
+                height: 90px;
+                top: 40px;
+                right: 40px;
+                background-size: contain;
+                background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='89' height='89' viewBox='0 0 89 89' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M63.7045 54.1018V47.5818H58.1045V44.3418H63.7045V37.8218H66.9045V44.3418H72.7045V47.5818H66.9045V54.1018H63.7045Z' fill='%23AC1B46'/%3e%3cpath d='M39.6428 62.5819V59.5419L47.8828 46.7019C48.4962 45.7419 49.0562 44.8485 49.5628 44.0219C50.0962 43.1952 50.5228 42.3285 50.8428 41.4219C51.1895 40.4885 51.3628 39.4219 51.3628 38.2219C51.3628 36.7285 51.1228 35.5552 50.6428 34.7019C50.1628 33.8485 49.3228 33.4219 48.1228 33.4219C47.1095 33.4219 46.3228 33.7019 45.7628 34.2619C45.2028 34.8219 44.8162 35.5552 44.6028 36.4619C44.3895 37.3685 44.2828 38.3419 44.2828 39.3819V40.4619H40.0028V39.3419C40.0028 37.3952 40.2562 35.7285 40.7628 34.3419C41.2962 32.9285 42.1362 31.8352 43.2828 31.0619C44.4562 30.2885 46.0028 29.9019 47.9228 29.9019C50.5362 29.9019 52.4828 30.6485 53.7628 32.1419C55.0428 33.6085 55.6828 35.6485 55.6828 38.2619C55.6828 39.6485 55.5095 40.8619 55.1628 41.9019C54.8428 42.9419 54.4162 43.9152 53.8828 44.8219C53.3495 45.7285 52.7628 46.6619 52.1228 47.6219L44.6828 58.9819H54.9228V62.5819H39.6428Z' fill='%23AC1B46'/%3e%3cpath d='M28.9835 62.5816V35.7816C28.9568 35.8083 28.6502 35.8883 28.0635 36.0216C27.5035 36.155 26.8635 36.2883 26.1435 36.4216C25.4235 36.555 24.7835 36.675 24.2235 36.7816C23.6635 36.8883 23.3702 36.9416 23.3435 36.9416V33.7016C23.7968 33.595 24.3168 33.4483 24.9035 33.2616C25.5168 33.075 26.1302 32.8483 26.7435 32.5816C27.3835 32.315 27.9835 31.9816 28.5435 31.5816C29.1302 31.1816 29.6235 30.715 30.0235 30.1816H33.2635V62.5816H28.9835Z' fill='%23AC1B46'/%3e%3cpath fill-rule='evenodd' clip-rule='evenodd' d='M44.9331 86.915C68.1291 86.915 86.9331 68.111 86.9331 44.915C86.9331 21.7191 68.1291 2.91504 44.9331 2.91504C21.7371 2.91504 2.93311 21.7191 2.93311 44.915C2.93311 68.111 21.7371 86.915 44.9331 86.915ZM44.9331 88.915C69.2336 88.915 88.9331 69.2156 88.9331 44.915C88.9331 20.6145 69.2336 0.915039 44.9331 0.915039C20.6326 0.915039 0.933105 20.6145 0.933105 44.915C0.933105 69.2156 20.6326 88.915 44.9331 88.915Z' fill='%23AC1B46'/%3e%3c/svg%3e ");
+            }
+
+            .application__title {
+                padding-right:  60px;
+            }
+
+            @media(max-width: 1280px) {
+                &::before {
+                    top: 60px;
+                    width: 60px;
+                    height: 60px;
+                }
+            }
+
+            @media(max-width: 960px) {
+                &::before {
+                    top: 30px;
+                    right: 30px;
+                }
+            }
+
+
+            .application__content {
+                position: relative;
+                padding-left: 150px;
+                
+                &:before {
+                    content: "";
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 120px;
+                    height: 120px;
+                    background-repeat: no-repeat;
+                    background-size: contain;
+                    background-image: url('../images/tabletka.png');
+                }
+
+                @media(max-width: 768px) {
+                    padding-left: 0;
+
+                    &:before {
+                        display: none;
+                    }
+                }
+            } 
+
+        }
+
+        @media(max-width: 960px) {
+            padding: 30px;
+            width: 100%;
+
+            &:first-child {
+                margin-bottom: 20px;
+            }
+        }
+    }
+
+    &__title {
+        font-size: 42px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 100%;
+        margin-bottom: 38px;
+
+        @media(max-width: 960px) {
+            font-size: 28px;
+            margin-bottom: 20px;
+        }
+    }
+
+    &__sub-title {
+        font-size: 36px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 130%;
+        color: $active;
+        margin-bottom: 20px;
+
+        @media(max-width: 960px) {
+            font-size: 24px;
+        }
+    }
+
+    &__description {
+        font-size: 28px;
+        font-weight: 300;
+        line-height: 140%;
+
+        @media(max-width: 960px) {
+            font-size: 20px;
+        }
+
+        ul {
+
+            li {
+                position: relative;
+                padding-left: 32px;
+                
+
+                &::before {
+                    content: "";
+                    position: absolute;
+                    top: 14px;
+                    left: 0;
+                    height: 14px;
+                    width: 24px;
+                    background-size: contain;
+                    background-repeat: no-repeat;
+                    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' width='24' height='15' viewBox='0 0 24 15' fill='none'%3e%3cpath d='M0 7.5H23.5623M23.5623 7.5C20.384 6.5298 17.5841 4.21623 16.6122 0.783203M23.5623 7.5C20.384 8.4702 17.5841 10.7838 16.6122 14.2168' stroke='%233D3D3D' stroke-width='2' stroke-linejoin='bevel'/%3e%3c/svg%3e");
+                }
+
+                @media(max-width: 960px) {
+                    &::before {
+                        top: 8px;
+                    }
+                }
+            }
+        }
+    }
+}
