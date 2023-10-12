@@ -40,6 +40,37 @@
                 spaceBetween: 20,
             },
             960: {
+                slidesPerView: 2,
+                spaceBetween: 30,
+            },
+            1280: {
+                slidesPerView: 3,
+                spaceBetween: 30,
+            }
+        },
+    });
+})();
+
+(function () {
+    const info = document.querySelector(".info");
+    if (!info) return;
+
+    new Swiper(".info__slider", {
+        spaceBetween: 30,
+        navigation: {
+            nextEl: ".info .sl-arrows__arrow--next",
+            prevEl: ".info .sl-arrows__arrow--prev",
+        },
+        breakpoints: {
+            320: {
+                slidesPerView: 1.1,
+                spaceBetween: 20,
+            },
+            960: {
+                slidesPerView: 2,
+                spaceBetween: 30,
+            },
+            1280: {
                 slidesPerView: 3,
                 spaceBetween: 30,
             }
