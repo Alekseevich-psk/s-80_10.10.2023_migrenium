@@ -1,3 +1,189 @@
 .footer {
-    
+    padding: 90px 0;
+
+    @media(max-width: 960px) {
+        padding: 40px 0;
+    }
+
+    &__wrapper {
+        position: relative;
+    }
+
+    &__inner {
+        width: 50%;
+
+        @media(max-width: 960px) {
+            width: 100%;
+        }
+
+        &--promomed,
+        &--promomed a {
+            font-family: 'Oswald', Arial, Helvetica, sans-serif;
+            color: $black;
+            font-size: 28px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 140%;
+            margin-bottom: 46px;
+
+            @media(max-width: 960px) {
+                font-size: 20px;
+            }
+
+            a {
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+        }
+
+        &--promomed {
+            .footer__item {
+                margin-bottom: 20px;
+
+                @media(max-width: 960px) {
+                    margin-bottom: 16px;
+                }
+
+                &:last-child {
+                    margin-bottom: 0;
+                }
+            }
+        }
+
+        &--info {
+            p {
+                font-size: 16px;
+                font-style: normal;
+                font-weight: 300;
+                line-height: 120%;
+                opacity: 0.8;
+                margin-bottom: 24px;
+
+                &:last-child {
+                    margin-bottom: 50px;
+                }
+            }
+        }
+    }
+
+    &__designer {
+        font-family: 'Oswald', Arial, Helvetica, sans-serif;
+        color: $black;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 300;
+        line-height: 140%;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+
+
+    &__bg {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 50%;
+        height: 100%;
+
+        @media(max-width: 960px) {
+            position: relative;
+            display: block;
+            width: 100%;
+            max-width: 620px;
+            height: 420px;
+        }
+
+        @media(max-width: 768px) {
+            height: auto;
+        }
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+    }
+
+    &__link {
+
+        &--promomed {
+            position: relative;
+            display: block;
+            max-width: 620px;
+            height: 180px;
+            margin-bottom: 64px;
+
+            @media(max-width: 960px) {
+                max-width: 80%;
+                margin-bottom: 20px !important;
+            }
+
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: contain;
+            }
+        }
+    }
+
+    &__warning {
+        position: relative;
+        margin-top: 32px;
+        width: 100%;
+        box-shadow: $boxShadow;
+        padding: 60px;
+        padding-right: 100px;
+        border-radius: 30px;
+        color: #838383;
+        font-family: 'Oswald', Arial, Helvetica, sans-serif;
+        font-size: 38px;
+        font-style: normal;
+        font-weight: 300;
+        line-height: normal;
+        text-transform: uppercase;
+
+        @media(max-width: 1280px) {
+            font-size: 32px;
+        }
+
+        @media(max-width: 960px) {
+            font-size: 24px;
+            padding: 32px;
+            padding-right: 80px;
+        }
+
+        @media(max-width: 540px) {
+            font-size: 18px;
+        }
+
+        &-btn {
+            cursor: pointer;
+            position: absolute;
+            transform: translateY(-50%);
+            opacity: 0.6;
+            top: 50%;
+            right: 40px;
+            width: 66px;
+            height: 66px;
+            transition: $transition;
+            background-size: 100% 100%;
+            background-repeat: no-repeat;
+            background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' width='65' height='65' viewBox='0 0 65 65' fill='none'%3e%3cg clip-path='url(%23clip0_6_44)'%3e%3cpath fill-rule='evenodd' clip-rule='evenodd' d='M31.1137 30.986L14.7866 47.3131L16.2008 48.7273L32.5279 32.4003L48.8544 48.7268L50.2686 47.3126L33.9421 30.986L48.7277 16.2004L47.3135 14.7862L32.5279 29.5718L17.7417 14.7856L16.3275 16.1999L31.1137 30.986Z' fill='%233D3D3D'/%3e%3c/g%3e%3cdefs%3e%3cclipPath id='clip0_6_44'%3e%3crect width='65' height='65' fill='white'/%3e%3c/clipPath%3e%3c/defs%3e%3c/svg%3e");
+
+            &:hover {
+                opacity: 1;
+            }
+
+            @media(max-width: 960px) {
+                width: 54px;
+                height: 54px;
+                right: 20px;
+            }
+        }
+
+    }
+
 }
