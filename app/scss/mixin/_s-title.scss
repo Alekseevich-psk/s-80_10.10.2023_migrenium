@@ -1,0 +1,10 @@
+@mixin sTitle() {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-bottom: 80px;
+
+    @media(max-width: 960px) {
+        margin-bottom: 56px;
+    }
+}
