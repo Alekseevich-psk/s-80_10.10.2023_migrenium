@@ -16,7 +16,7 @@
 
     function addClassForElement(el) {
         scrollHeight() > heightElem ? el.classList.add(classForHeaderScroll) : el.classList.remove(classForHeaderScroll);
-        nextElem.style.marginTop = heightElem + 'px';
+        // nextElem.style.marginTop = heightElem + 'px';
     }
 
     function scrollHeight() {
