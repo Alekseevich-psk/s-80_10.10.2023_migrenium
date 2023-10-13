@@ -2432,6 +2432,7 @@ a {
   }
 }
 .application__title {
+  color: #3D3D3D;
   font-size: 42px;
   font-style: normal;
   font-weight: 600;
