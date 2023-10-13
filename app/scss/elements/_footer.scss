@@ -145,6 +145,10 @@
         line-height: normal;
         text-transform: uppercase;
 
+        &.hide {
+            display: none;
+        }
+
         @media(max-width: 1280px) {
             font-size: 32px;
         }
