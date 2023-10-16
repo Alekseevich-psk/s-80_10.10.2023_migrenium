@@ -11,11 +11,11 @@
     let h = 10;
 
     random();
-    newCoord();
+    newCord();
 
     setInterval(() => {
         random();
-        newCoord();
+        newCord();
     }, interval);
 
     function random() {
@@ -28,7 +28,7 @@
         h = Math.floor((Math.random() * max) + min);
     }
 
-    function newCoord() {
+    function newCord() {
         el.style.top = y + "%";
         el.style.left = x + "%";
         el.style.height = h + "%";

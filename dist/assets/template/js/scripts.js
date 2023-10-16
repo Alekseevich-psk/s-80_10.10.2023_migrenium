@@ -10,10 +10,10 @@
   var w = 10;
   var h = 10;
   random();
-  newCoord();
+  newCord();
   setInterval(function () {
     random();
-    newCoord();
+    newCord();
   }, interval);
   function random() {
     var max = 100;
@@ -23,7 +23,7 @@
     w = Math.floor(Math.random() * max + min);
     h = Math.floor(Math.random() * max + min);
   }
-  function newCoord() {
+  function newCord() {
     el.style.top = y + "%";
     el.style.left = x + "%";
     el.style.height = h + "%";
