@@ -58,3 +58,9 @@ a {
         width: 100%;
     }
 }
+
+.swiper-button-disabled {
+    transition: 0.2s;
+    opacity: 0.5;
+    box-shadow: none;
+}
