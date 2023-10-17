@@ -1217,8 +1217,8 @@ a {
   -o-transition: 0.2s;
   transition: 0.2s;
   opacity: 0.5;
-  -webkit-box-shadow: none;
-          box-shadow: none;
+  -webkit-box-shadow: none !important;
+          box-shadow: none !important;
 }
 
 .logo {
