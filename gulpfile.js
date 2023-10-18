@@ -3,8 +3,8 @@ const project_flr = "dist";
 const source_flr = "app";
 const baseDir = "./" + project_flr + "/";
 const fs = require('fs');
-const pathFiles = "/assets/template/";
-const outPathFiles = "/assets/template/";
+const pathFiles = "/";
+const outPathFiles = "/";
 
 // main path
 let path = {
@@ -22,7 +22,7 @@ let path = {
         html: source_flr + "/html/*.html",
         css: source_flr + "/scss/style.scss",
         js: source_flr + "/scripts/**/*.js",
-        video: source_flr + "/video/*.{mp4,webm,ogv,swf}",
+        video: source_flr + "/video/**/*.{mp4,webm,ogv,swf}",
         img: source_flr + "/images/**/*.{jpg,png,svg,gif,ico,webp}",
         fonts: source_flr + "/fonts/*.{otf,ttf,woff2,woff}",
         sourcesFonts: source_flr + "/fonts/sources-fonts/*.{otf,ttf,woff2,woff}",

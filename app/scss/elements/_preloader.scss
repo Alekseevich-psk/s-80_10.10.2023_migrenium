@@ -1,5 +1,4 @@
 .preloader {
-    display: none;
     position: fixed;
     width: 100%;
     height: 100%;
@@ -8,7 +7,7 @@
     left: 0;
     opacity: 1;
     transition: 0.1s;
-    
+
     &.hide {
         opacity: 0;
         top: 50%;
@@ -21,7 +20,7 @@
     &__overlay {
         width: 100%;
         height: 100%;
-        background-color: #2A2A2E;
+        background-color: $activeVisited;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -31,6 +30,6 @@
         width: 120px;
         height: 120px;
         background-size: 100% 100%;
-        background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' style='margin: auto; background: rgba(255, 255, 255, 0); display: block;' width='200px' height='200px' viewBox='0 0 100 100' preserveAspectRatio='xMidYMid'%3e%3cpath fill='none' stroke='%23be1d18' stroke-width='5' stroke-dasharray='202.70525329589844 53.883674926757806' d='M24.3 30C11.4 30 5 43.3 5 50s6.4 20 19.3 20c19.3 0 32.1-40 51.4-40 C88.6 30 95 43.3 95 50s-6.4 20-19.3 20C56.4 70 43.6 30 24.3 30z' stroke-linecap='round' style='transform:scale(0.8200000000000001);transform-origin:50px 50px'%3e%3canimate attributeName='stroke-dashoffset' repeatCount='indefinite' dur='1.7543859649122806s' keyTimes='0;1' values='0;256.58892822265625'%3e%3c/animate%3e%3c/path%3e%3c/svg%3e");
+        background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' style='margin: auto; background: rgba(241, 242, 243, 0); display: block;' width='200px' height='200px' viewBox='0 0 100 100' preserveAspectRatio='xMidYMid'%3e%3ccircle cx='80' cy='50' r='5' fill='%23220b09'%3e%3canimate attributeName='cx' values='80;50' keyTimes='0;1' dur='1s' repeatCount='indefinite'%3e%3c/animate%3e%3canimate attributeName='cy' values='50;80' keyTimes='0;1' dur='1s' repeatCount='indefinite'%3e%3c/animate%3e%3canimate attributeName='fill' values='%23220b09;%23d34c31' keyTimes='0;1' dur='1s' repeatCount='indefinite'%3e%3c/animate%3e%3c/circle%3e%3ccircle cx='50' cy='80' r='5' fill='%23d34c31'%3e%3canimate attributeName='cx' values='50;20' keyTimes='0;1' dur='1s' repeatCount='indefinite'%3e%3c/animate%3e%3canimate attributeName='cy' values='80;50.00000000000001' keyTimes='0;1' dur='1s' repeatCount='indefinite'%3e%3c/animate%3e%3canimate attributeName='fill' values='%23d34c31;%23e88432' keyTimes='0;1' dur='1s' repeatCount='indefinite'%3e%3c/animate%3e%3c/circle%3e%3ccircle cx='20' cy='50.00000000000001' r='5' fill='%23e88432'%3e%3canimate attributeName='cx' values='20;49.99999999999999' keyTimes='0;1' dur='1s' repeatCount='indefinite'%3e%3c/animate%3e%3canimate attributeName='cy' values='50.00000000000001;20' keyTimes='0;1' dur='1s' repeatCount='indefinite'%3e%3c/animate%3e%3canimate attributeName='fill' values='%23e88432;%23ff312d' keyTimes='0;1' dur='1s' repeatCount='indefinite'%3e%3c/animate%3e%3c/circle%3e%3ccircle cx='49.99999999999999' cy='20' r='5' fill='%23ff312d'%3e%3canimate attributeName='cx' values='49.99999999999999;80' keyTimes='0;1' dur='1s' repeatCount='indefinite'%3e%3c/animate%3e%3canimate attributeName='cy' values='20;49.99999999999999' keyTimes='0;1' dur='1s' repeatCount='indefinite'%3e%3c/animate%3e%3canimate attributeName='fill' values='%23ff312d;%23220b09' keyTimes='0;1' dur='1s' repeatCount='indefinite'%3e%3c/animate%3e%3c/circle%3e%3c/svg%3e");
     }
 }
