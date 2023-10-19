@@ -1853,6 +1853,8 @@ a {
   height: calc(100% - 80px);
   -o-object-fit: cover;
      object-fit: cover;
+  -o-object-position: bottom center;
+     object-position: bottom center;
 }
 @media (max-width: 1740px) {
   .main__video video {
