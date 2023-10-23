@@ -86,24 +86,31 @@ document.addEventListener("DOMContentLoaded", function () {
   var videoMobile = main.querySelector("#video-mobile");
   var arrVideo = [videoDesktop, videoMobile];
   arrVideo.forEach(function (video, index) {
-    video.addEventListener("loadeddata", function () {
-      if (video.readyState >= 2) {
-        video.play();
-        sliderPlay();
-      }
-    });
-    video.addEventListener('ended', function () {
-      video.pause();
-      if (index = 0) {
-        video.currentTime = 17;
-        video.play();
-      }
-    });
+    // video.addEventListener("loadeddata", () => {
+    //     if (video.readyState >= 2) {
+    //         video.play();
+    //         sliderPlay();
+    //     }
+    // });
+
+    // video.onloadeddata = function(e) {
+    //     if (video.readyState >= 2) {
+    //         video.play();
+    //         sliderPlay();
+    //     }
+    // }
+
+    // video.addEventListener("ended", function () {
+    //     video.pause();
+    //     if ((index = 0)) {
+    //         video.currentTime = 17;
+    //         video.play();
+    //     }
+    // });
   });
   function sliderPlay() {
     var activeIndex = 0;
     var timerId;
-    console.log('sliderPlay');
     if (flagAnim) return;
     timerId = setInterval(function () {
       if (slides[activeIndex - 1]) {
@@ -197,14 +204,14 @@ document.addEventListener("DOMContentLoaded", function () {
 "use strict";
 
 (function () {
-  var warning = document.querySelector('.footer__warning');
+  var warning = document.querySelector(".footer__warning");
   if (!warning) return;
-  if (localStorage.warning === 'hide') {
-    return warning.classList.add('hide');
+  if (localStorage.warning === "hide") {
+    return warning.classList.add("hide");
   }
-  var btn = warning.querySelector('.footer__warning-btn');
-  btn.addEventListener('click', function () {
-    warning.classList.add('hide');
-    localStorage.setItem('warning', 'hide');
+  var btn = warning.querySelector(".footer__warning-btn");
+  btn.addEventListener("click", function () {
+    warning.classList.add("hide");
+    localStorage.setItem("warning", "hide");
   });
 })();

@@ -1416,6 +1416,7 @@ a {
 }
 .footer__warning {
   position: relative;
+  z-index: 1;
   margin-top: 32px;
   width: 100%;
   -webkit-box-shadow: 0 0 30px 0 rgba(207, 207, 211, 0.6);
@@ -1454,6 +1455,7 @@ a {
 }
 .footer__warning-btn {
   cursor: pointer;
+  z-index: 1;
   position: absolute;
   -webkit-transform: translateY(-50%);
       -ms-transform: translateY(-50%);

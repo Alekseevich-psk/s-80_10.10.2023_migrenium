@@ -1,5 +1,4 @@
 (function() {
-
     const menu = document.querySelector('.menu');
     if (!menu) return;
 
