@@ -20,7 +20,7 @@
 
         video.addEventListener("ended", function () {
             video.pause();
-            if ((index = 0)) {
+            if (index === 0) {
                 video.currentTime = 17;
                 video.play();
             }
