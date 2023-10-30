@@ -1797,6 +1797,7 @@ a {
 
 .main {
   position: relative;
+  margin: 0 auto;
   height: 100vh;
   max-width: 2400px;
   padding: 0 120px;
@@ -1817,9 +1818,6 @@ a {
   }
 }
 .main__video {
-  position: absolute;
-  top: 0;
-  left: 0;
   width: 100%;
   height: 100%;
   overflow: hidden;
@@ -1930,6 +1928,7 @@ a {
   position: relative;
   max-width: 2400px;
   padding: 90px 0;
+  margin: 0 auto;
 }
 @media (max-width: 960px) {
   .about-product {
