@@ -86,7 +86,7 @@ document.addEventListener("DOMContentLoaded", function () {
   var videoMobile = main.querySelector("#video-mobile");
   var arrVideo = [videoDesktop, videoMobile];
   arrVideo.forEach(function (video, index) {
-    video.onprogress = function () {
+    video.oncanplay = function () {
       video.play();
       sliderPlay();
       console.log("Downloading video");

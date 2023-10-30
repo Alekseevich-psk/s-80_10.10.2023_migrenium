@@ -12,7 +12,7 @@
 
     arrVideo.forEach((video, index) => {
 
-        video.onprogress = () => {
+        video.oncanplay = () => {
             video.play();
             sliderPlay();
 
