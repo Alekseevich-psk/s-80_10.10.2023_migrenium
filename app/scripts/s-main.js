@@ -11,27 +11,20 @@
     const arrVideo = [videoDesktop, videoMobile];
 
     arrVideo.forEach((video, index) => {
-        // video.addEventListener("loadeddata", () => {
-        //     if (video.readyState >= 2) {
-        //         video.play();
-        //         sliderPlay();
-        //     }
-        // });
+        video.addEventListener("loadeddata", () => {
+            if (video.readyState >= 2) {
+                video.play();
+                sliderPlay();
+            }
+        });
 
-        // video.onloadeddata = function(e) {
-        //     if (video.readyState >= 2) {
-        //         video.play();
-        //         sliderPlay();
-        //     }
-        // }
-
-        // video.addEventListener("ended", function () {
-        //     video.pause();
-        //     if ((index = 0)) {
-        //         video.currentTime = 17;
-        //         video.play();
-        //     }
-        // });
+        video.addEventListener("ended", function () {
+            video.pause();
+            if ((index = 0)) {
+                video.currentTime = 17;
+                video.play();
+            }
+        });
     });
 
     function sliderPlay() {

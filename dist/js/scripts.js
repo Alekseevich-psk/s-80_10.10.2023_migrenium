@@ -86,27 +86,19 @@ document.addEventListener("DOMContentLoaded", function () {
   var videoMobile = main.querySelector("#video-mobile");
   var arrVideo = [videoDesktop, videoMobile];
   arrVideo.forEach(function (video, index) {
-    // video.addEventListener("loadeddata", () => {
-    //     if (video.readyState >= 2) {
-    //         video.play();
-    //         sliderPlay();
-    //     }
-    // });
-
-    // video.onloadeddata = function(e) {
-    //     if (video.readyState >= 2) {
-    //         video.play();
-    //         sliderPlay();
-    //     }
-    // }
-
-    // video.addEventListener("ended", function () {
-    //     video.pause();
-    //     if ((index = 0)) {
-    //         video.currentTime = 17;
-    //         video.play();
-    //     }
-    // });
+    video.addEventListener("loadeddata", function () {
+      if (video.readyState >= 2) {
+        video.play();
+        sliderPlay();
+      }
+    });
+    video.addEventListener("ended", function () {
+      video.pause();
+      if (index = 0) {
+        video.currentTime = 17;
+        video.play();
+      }
+    });
   });
   function sliderPlay() {
     var activeIndex = 0;
