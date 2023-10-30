@@ -85,22 +85,20 @@ document.addEventListener("DOMContentLoaded", function () {
   var videoDesktop = main.querySelector("#video-desktop");
   var videoMobile = main.querySelector("#video-mobile");
   var arrVideo = [videoDesktop, videoMobile];
-  document.addEventListener("DOMContentLoaded", function () {
-    arrVideo.forEach(function (video, index) {
-      video.addEventListener("loadeddata", function () {
-        if (video.readyState >= 2) {
-          video.play();
-          sliderPlay();
-        }
-      });
-      video.addEventListener("ended", function () {
-        video.pause();
-        if (index === 0) {
-          video.currentTime = 17;
-          video.play();
-        }
-      });
-    });
+  arrVideo.forEach(function (video, index) {
+    video.onprogress = function () {
+      video.play();
+      sliderPlay();
+      console.log("Downloading video");
+    };
+    video.onended = function () {
+      console.log("video - end");
+      video.pause();
+      if (index === 0) {
+        video.currentTime = 17;
+        video.play();
+      }
+    };
   });
   function sliderPlay() {
     var activeIndex = 0;

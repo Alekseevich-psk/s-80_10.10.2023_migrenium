@@ -10,23 +10,23 @@
     const videoMobile = main.querySelector("#video-mobile");
     const arrVideo = [videoDesktop, videoMobile];
 
-    document.addEventListener("DOMContentLoaded", function () {
-        arrVideo.forEach((video, index) => {
-            video.addEventListener("loadeddata", () => {
-                if (video.readyState >= 2) {
-                    video.play();
-                    sliderPlay();
-                }
-            });
-    
-            video.addEventListener("ended", function () {
-                video.pause();
-                if (index === 0) {
-                    video.currentTime = 17;
-                    video.play();
-                }
-            });
-        });
+    arrVideo.forEach((video, index) => {
+
+        video.onprogress = () => {
+            video.play();
+            sliderPlay();
+
+            console.log("Downloading video");
+        };
+
+        video.onended = () => {
+            console.log("video - end");
+            video.pause();
+            if (index === 0) {
+                video.currentTime = 17;
+                video.play();
+            }
+        };
     });
 
     function sliderPlay() {
