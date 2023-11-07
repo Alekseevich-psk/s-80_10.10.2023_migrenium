@@ -11,16 +11,12 @@
     const arrVideo = [videoDesktop, videoMobile];
 
     arrVideo.forEach((video, index) => {
-
         video.oncanplay = () => {
             video.play();
             sliderPlay();
-
-            console.log("Downloading video");
         };
 
         video.onended = () => {
-            console.log("video - end");
             video.pause();
             if (index === 0) {
                 video.currentTime = 17;

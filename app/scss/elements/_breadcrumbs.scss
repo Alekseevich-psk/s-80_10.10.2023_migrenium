@@ -1,0 +1,40 @@
+.breadcrumbs {
+    padding: 30px 0;
+
+    &__item {
+        position: relative;
+        display: inline-block;
+        margin-left: 20px;
+
+        &.active {
+            text-decoration: underline;
+        }
+
+        &:first-child {
+            margin-left: 0;
+
+            &:before {
+                display: none;
+            }
+        }
+
+        &:before {
+            content: "/";
+            position: absolute;
+            left: -14px;
+            font-weight: 300;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+    }
+
+    &__link {
+        font-family: "Oswald", Arial, Helvetica, sans-serif;
+        font-weight: 300;
+        color: $black;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+}

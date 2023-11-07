@@ -89,10 +89,8 @@ document.addEventListener("DOMContentLoaded", function () {
     video.oncanplay = function () {
       video.play();
       sliderPlay();
-      console.log("Downloading video");
     };
     video.onended = function () {
-      console.log("video - end");
       video.pause();
       if (index === 0) {
         video.currentTime = 17;
