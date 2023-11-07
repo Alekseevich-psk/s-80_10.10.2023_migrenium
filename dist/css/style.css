@@ -1797,7 +1797,7 @@ a {
 }
 
 .breadcrumbs {
-  padding: 30px 0;
+  padding: 12px 0;
 }
 .breadcrumbs__item {
   position: relative;
@@ -3005,4 +3005,8 @@ a {
 }
 .buy__slide:hover img {
   width: 100%;
+}
+
+.politica {
+  padding: 0 0 80px;
 }
