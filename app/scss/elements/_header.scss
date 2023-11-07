@@ -1,32 +1,34 @@
 .header {
-    position: fixed;
-    z-index: 100;
-    top: 0;
-    left: 0;
-    width: 100%;
-    transition: $transition;
-    padding: 12px 120px;
-    padding-top: 60px;
+    &__body {
+        position: fixed;
+        z-index: 100;
+        top: 0;
+        left: 0;
+        width: 100%;
+        transition: $transition;
+        padding: 12px 120px;
+        padding-top: 60px;
 
-    @media(max-width: 1740px) {
-        padding: 12px 20px;
-        padding-top: 40px;
-    }
-
-    @media(max-width: 960px) {
-        padding: 12px 20px;
-        padding-top: 20px;
-    }
-
-    &.scroll {
-        background-color: $white;
-        box-shadow: $boxShadow;
-        padding-top: 8px;
-        padding-bottom: 8px;
-
-        .header__logo {
-            width: 260px;
-            height: 50px;
+        @media(max-width: 1740px) {
+            padding: 12px 20px;
+            padding-top: 40px;
+        }
+    
+        @media(max-width: 960px) {
+            padding: 12px 20px;
+            padding-top: 20px;
+        }
+    
+        &.scroll {
+            background-color: $white;
+            box-shadow: $boxShadow;
+            padding-top: 8px;
+            padding-bottom: 8px;
+    
+            .header__logo {
+                width: 260px;
+                height: 50px;
+            }
         }
     }
 

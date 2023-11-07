@@ -35,23 +35,29 @@
 (function () {
   var header = document.querySelector(".header");
   if (!header) return;
-  var classForHeaderScroll = "scroll";
+  var classHeaderScroll = "scroll";
   var marginBottomFromElement = 0;
-  var nextElem = header.nextElementSibling;
-  var heightElem = getMaxOfArray(header);
-  addClassForElement(header);
+  var headerHeight = header.querySelector(".header__height");
+  var headerBody = header.querySelector(".header__body");
+  var heightElem = getHeightElem(headerBody);
+  addClassForElement(headerBody);
   window.onscroll = function () {
-    addClassForElement(header);
+    addClassForElement(headerBody);
   };
   function addClassForElement(el) {
-    scrollHeight() > heightElem ? el.classList.add(classForHeaderScroll) : el.classList.remove(classForHeaderScroll);
-    // nextElem.style.marginTop = heightElem + 'px';
+    if (scrollHeight() > heightElem) {
+      el.classList.add(classHeaderScroll);
+    } else {
+      el.classList.remove(classHeaderScroll);
+    }
+    if (headerHeight) {
+      headerHeight.style.height = heightElem + "px";
+    }
   }
-
   function scrollHeight() {
     return Math.max.apply(null, [window.pageYOffset, document.documentElement.scrollTop]);
   }
-  function getMaxOfArray(el) {
+  function getHeightElem(el) {
     return Math.max.apply(null, [el.clientHeight, el.offsetHeight]) + marginBottomFromElement;
   }
 })();

@@ -2,29 +2,36 @@
     const header = document.querySelector(".header");
     if (!header) return;
 
-    const classForHeaderScroll = "scroll";
+    const classHeaderScroll = "scroll";
     const marginBottomFromElement = 0;
-    const nextElem = header.nextElementSibling;
 
-    const heightElem = getMaxOfArray(header);
-    
-    addClassForElement(header);
+    const headerHeight = header.querySelector(".header__height");
+    const headerBody = header.querySelector(".header__body");
+    const heightElem = getHeightElem(headerBody);
+
+    addClassForElement(headerBody);
 
     window.onscroll = () => {
-        addClassForElement(header);
+        addClassForElement(headerBody);
     };
 
     function addClassForElement(el) {
-        scrollHeight() > heightElem ? el.classList.add(classForHeaderScroll) : el.classList.remove(classForHeaderScroll);
-        // nextElem.style.marginTop = heightElem + 'px';
+        if (scrollHeight() > heightElem) {
+            el.classList.add(classHeaderScroll);
+        } else {
+            el.classList.remove(classHeaderScroll);
+        }
+
+        if (headerHeight) {
+            headerHeight.style.height = heightElem + "px";
+        }
     }
 
     function scrollHeight() {
         return Math.max.apply(null, [window.pageYOffset, document.documentElement.scrollTop]);
     }
 
-    function getMaxOfArray(el) {
+    function getHeightElem(el) {
         return Math.max.apply(null, [el.clientHeight, el.offsetHeight]) + marginBottomFromElement;
     }
-
 })();

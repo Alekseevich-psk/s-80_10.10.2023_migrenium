@@ -1233,7 +1233,7 @@ a {
   background-image: url("../images/logo.svg");
 }
 
-.header {
+.header__body {
   position: fixed;
   z-index: 100;
   top: 0;
@@ -1246,25 +1246,25 @@ a {
   padding-top: 60px;
 }
 @media (max-width: 1740px) {
-  .header {
+  .header__body {
     padding: 12px 20px;
     padding-top: 40px;
   }
 }
 @media (max-width: 960px) {
-  .header {
+  .header__body {
     padding: 12px 20px;
     padding-top: 20px;
   }
 }
-.header.scroll {
+.header__body.scroll {
   background-color: #fff;
   -webkit-box-shadow: 0 0 30px 0 rgba(207, 207, 211, 0.6);
           box-shadow: 0 0 30px 0 rgba(207, 207, 211, 0.6);
   padding-top: 8px;
   padding-bottom: 8px;
 }
-.header.scroll .header__logo {
+.header__body.scroll .header__logo {
   width: 260px;
   height: 50px;
 }
