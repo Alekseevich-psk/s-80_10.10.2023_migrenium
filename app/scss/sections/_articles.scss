@@ -1,8 +1,33 @@
 .articles {
     padding: 0 0 50px;
 
+    &__wrapper {
+        margin-top: 40px;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        background: #f8f8f8;
+        padding: 40px;
+        border-radius: 50px;
+
+        @media (max-width: 960px) {
+            padding: 10px;
+            border-radius: 12px;
+        }
+    }
+
     &__s-title {
         color: $black;
         margin-bottom: 32px;
+    }
+
+    &__card {
+        width: calc(98% / 2);
+        margin-bottom: 2%;
+
+        @media (max-width: 960px) {
+            width: 100%;
+            margin-bottom: 20px;
+        }
     }
 }
