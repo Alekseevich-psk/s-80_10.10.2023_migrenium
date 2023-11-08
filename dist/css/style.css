@@ -2504,6 +2504,7 @@ a {
   position: relative;
   margin: 0 auto;
   height: 100vh;
+  max-height: 1200px;
   max-width: 2400px;
   padding: 0 120px;
 }
@@ -2524,11 +2525,27 @@ a {
 }
 .main__video {
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
+  top: 50%;
+  left: 50%;
+  width: calc(100% - 80px);
+  height: calc(100% - 80px);
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
   overflow: hidden;
+}
+@media (max-width: 1740px) {
+  .main__video {
+    width: calc(100% - 40px);
+    height: calc(100% - 40px);
+  }
+}
+@media (max-width: 960px) {
+  .main__video {
+    width: calc(100% - 20px);
+    height: calc(100% - 20px);
+    border-radius: 20px;
+  }
 }
 @media (max-width: 768px) {
   .main__video-desktop {
@@ -2551,30 +2568,15 @@ a {
   -ms-touch-action: none;
       touch-action: none;
   position: absolute;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-      -ms-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
+  top: 0;
+  left: 0;
   border-radius: 32px;
-  width: calc(100% - 80px);
-  height: calc(100% - 80px);
+  width: 100%;
+  height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
   -o-object-position: bottom center;
      object-position: bottom center;
-}
-@media (max-width: 1740px) {
-  .main__video video {
-    width: calc(100% - 40px);
-    height: calc(100% - 40px);
-  }
-}
-@media (max-width: 960px) {
-  .main__video video {
-    width: calc(100% - 20px);
-    height: calc(100% - 20px);
-  }
 }
 .main__container {
   height: 100%;
@@ -2658,7 +2660,6 @@ a {
   background-size: cover;
   background-position: center center;
   border-radius: 30px;
-  height: calc(100% - 0px);
   background: -webkit-gradient(linear, left top, left bottom, color-stop(13.66%, #EEE), color-stop(87.41%, rgba(217, 217, 223, 0.13)));
   background: -o-linear-gradient(top, #EEE 13.66%, rgba(217, 217, 223, 0.13) 87.41%);
   background: linear-gradient(180deg, #EEE 13.66%, rgba(217, 217, 223, 0.13) 87.41%);

@@ -10,7 +10,6 @@
 
     &:before {
         @include bgImage();
-        height: calc(100% - 0px);
         background: linear-gradient(180deg, #EEE 13.66%, rgba(217, 217, 223, 0.13) 87.41%);
     }
 
