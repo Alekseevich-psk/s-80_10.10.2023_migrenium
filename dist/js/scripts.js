@@ -148,6 +148,27 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 })();
 (function () {
+  var articleSlider = document.querySelector(".article-slider");
+  if (!articleSlider) return;
+  new Swiper(".article-slider__slider", {
+    spaceBetween: 30,
+    navigation: {
+      nextEl: ".article-slider .sl-arrows__arrow--next",
+      prevEl: ".article-slider .sl-arrows__arrow--prev"
+    },
+    breakpoints: {
+      320: {
+        slidesPerView: 1.1,
+        spaceBetween: 20
+      },
+      960: {
+        slidesPerView: 2,
+        spaceBetween: 30
+      }
+    }
+  });
+})();
+(function () {
   var price = document.querySelector(".price");
   if (!price) return;
   new Swiper(".price__slider", {

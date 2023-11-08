@@ -1,0 +1,19 @@
+.article-slider {
+
+    &__slider {
+        overflow: hidden;
+    }
+
+    &__sub-wrapper {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 64px;
+    }
+
+    &__card {
+        @media(max-width: 960px) {
+            height: fit-content !important;
+        }
+    }
+}

@@ -25,6 +25,29 @@
 })();
 
 (function () {
+    const articleSlider = document.querySelector(".article-slider");
+    if (!articleSlider) return;
+
+    new Swiper(".article-slider__slider", {
+        spaceBetween: 30,
+        navigation: {
+            nextEl: ".article-slider .sl-arrows__arrow--next",
+            prevEl: ".article-slider .sl-arrows__arrow--prev",
+        },
+        breakpoints: {
+            320: {
+                slidesPerView: 1.1,
+                spaceBetween: 20,
+            },
+            960: {
+                slidesPerView: 2,
+                spaceBetween: 30,
+            },
+        },
+    });
+})();
+
+(function () {
     const price = document.querySelector(".price");
     if (!price) return;
 
@@ -46,7 +69,7 @@
             1280: {
                 slidesPerView: 3,
                 spaceBetween: 30,
-            }
+            },
         },
     });
 })();
@@ -73,7 +96,7 @@
             1280: {
                 slidesPerView: 3,
                 spaceBetween: 30,
-            }
+            },
         },
     });
 })();
