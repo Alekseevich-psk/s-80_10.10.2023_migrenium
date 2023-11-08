@@ -1,0 +1,80 @@
+.not-found {
+    position: relative;
+    text-align: center;
+
+    &:before {
+        position: absolute;
+        z-index: 2;
+        content: "";
+        top: 15%;
+        left: 20%;
+        width: 60%;
+        height: 40%;
+        background-position: center center;
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-image: url("../images/btfs.png");
+    }
+
+    &__title {
+        display: inline;
+        font-size: 300px;
+        letter-spacing: 50px;
+        line-height: 100%;
+        font-weight: 700;
+        color: $white;
+        filter: drop-shadow(0px 10px 20px rgba(119, 119, 119, 0.3));
+
+        @media (max-width: 960px) {
+            font-size: 200px;
+        }
+
+        @media (max-width: 768px) {
+            font-size: 100px;
+            letter-spacing: normal;
+            filter: drop-shadow(0px 4px 4px rgba(119, 119, 119, 0.8));
+        }
+    }
+
+    &__sub-title {
+        padding-top: 20px;
+        text-align: center;
+        font-family: "Oswald", Arial, Helvetica, sans-serif;
+        font-size: 50px;
+        font-style: normal;
+        font-weight: 600;
+        color: $active;
+        line-height: normal;
+        margin-bottom: 20px;
+
+        @media (max-width: 768px) {
+            font-size: 32px;
+            line-height: 120%;
+        }
+    }
+
+    &__description {
+        color: #494a4c;
+        text-align: center;
+        font-family: "Oswald", Arial, Helvetica, sans-serif;
+        font-size: 28px;
+        font-style: normal;
+        font-weight: 300;
+        line-height: 110%;
+
+        @media (max-width: 768px) {
+            font-size: 16px;
+        }
+    }
+
+    &__align {
+        padding-top: 32px;
+    }
+
+    &__button {
+        @media (max-width: 768px) {
+            padding: 12px 32px 14px;
+            font-size: 16px;
+        }
+    }
+}
