@@ -4,7 +4,7 @@
 
     const btnMenu = menu.querySelector('.menu__btn');
 
-    btnMenu.addEventListener('click', () => {
+    btnMenu.addEventListener('click', (e) => {
         menu.classList.toggle('active');
     });
 

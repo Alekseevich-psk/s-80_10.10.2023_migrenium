@@ -67,7 +67,7 @@
   var menu = document.querySelector('.menu');
   if (!menu) return;
   var btnMenu = menu.querySelector('.menu__btn');
-  btnMenu.addEventListener('click', function () {
+  btnMenu.addEventListener('click', function (e) {
     menu.classList.toggle('active');
   });
 })();
