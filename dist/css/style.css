@@ -3036,13 +3036,12 @@ a {
   z-index: 2;
   background-color: #fff;
   border-radius: 30px;
-  font-size: 36px;
-  font-weight: 600;
-  line-height: 120%;
+  -webkit-transition: 0.25s;
+  -o-transition: 0.25s;
+  transition: 0.25s;
   color: #AC1B45;
   padding: 38px 40px;
-  max-width: 350px;
-  text-align: center;
+  width: 350px;
   min-height: 170px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -3050,17 +3049,74 @@ a {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+.info__description-def {
+  display: inline-block;
+  margin: 0 auto;
+  font-size: 36px;
+  font-weight: 600;
+  line-height: 120%;
+  text-align: center;
+  opacity: 1;
+  visibility: visible;
+  height: auto;
+}
+@media (max-width: 960px) {
+  .info__description-def {
+    width: 100%;
+    font-size: 24px;
+  }
+}
+.info__description-active {
+  text-align: center;
+  opacity: 0;
+  visibility: hidden;
+  height: 0;
+  width: 0;
+  -webkit-transition-property: opacity;
+  -o-transition-property: opacity;
+  transition-property: opacity;
+  -webkit-transition-delay: 0.1s;
+       -o-transition-delay: 0.1s;
+          transition-delay: 0.1s;
+}
+@media (max-width: 960px) {
+  .info__description-active {
+    width: 100%;
+    padding: 0 12px;
+    font-size: 16px;
+  }
+}
+.info__description:hover .info__description-def {
+  opacity: 0;
+  visibility: hidden;
+  height: 0;
+  width: 0;
+}
+.info__description:hover .info__description-active {
+  display: block;
+  opacity: 1;
+  visibility: visible;
+  height: auto;
+  width: 100%;
 }
 @media (max-width: 960px) {
   .info__description {
     border-radius: 20px;
     max-width: none;
     width: 100%;
-    font-size: 24px;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    padding: 28px 0px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding: 28px 12px;
     min-height: auto;
     right: 0;
   }
