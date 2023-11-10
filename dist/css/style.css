@@ -2072,20 +2072,6 @@ a {
     font-size: 16px;
   }
 }
-.content li {
-  font-size: 26px;
-  font-weight: 300;
-}
-@media (max-width: 960px) {
-  .content li {
-    font-size: 18px;
-  }
-}
-@media (max-width: 768px) {
-  .content li {
-    font-size: 16px;
-  }
-}
 .content ul {
   padding: 12px 0 12px 20px;
 }
@@ -2111,7 +2097,12 @@ a {
 .content ol {
   counter-reset: count;
   list-style-type: none;
-  padding: 12px 0 12px 18px;
+  padding: 12px 0 12px 30px;
+}
+@media (max-width: 960px) {
+  .content ol {
+    padding: 12px 0 12px 26px;
+  }
 }
 .content ol li {
   position: relative;
@@ -2125,10 +2116,35 @@ a {
   content: counters(count, ".") ". ";
   position: absolute;
   top: 0;
-  left: -16px;
+  left: -20px;
   color: #AC1B45;
-  font-size: 14px;
-  font-weight: 500;
+  font-size: 26px;
+  font-weight: 300;
+}
+@media (max-width: 960px) {
+  .content ol li::before {
+    font-size: 18px;
+    left: -16px;
+  }
+}
+@media (max-width: 768px) {
+  .content ol li::before {
+    font-size: 16px;
+  }
+}
+.content li {
+  font-size: 26px;
+  font-weight: 300;
+}
+@media (max-width: 960px) {
+  .content li {
+    font-size: 18px;
+  }
+}
+@media (max-width: 768px) {
+  .content li {
+    font-size: 16px;
+  }
 }
 .content blockquote {
   position: relative;
