@@ -2305,8 +2305,9 @@ a {
   background-color: #AC1B45;
   color: #fff;
 }
-.categories__item.active .categories__link:after {
-  background-color: #fff;
+.categories__item.active .categories__link img {
+  -webkit-filter: invert(100%) sepia(0%) saturate(7494%) hue-rotate(297deg) brightness(105%) contrast(103%);
+          filter: invert(100%) sepia(0%) saturate(7494%) hue-rotate(297deg) brightness(105%) contrast(103%);
 }
 .categories__link {
   position: relative;

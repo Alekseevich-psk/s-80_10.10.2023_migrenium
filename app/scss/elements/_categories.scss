@@ -41,8 +41,8 @@
                 background-color: $active;
                 color: $white;
 
-                &:after {
-                    background-color: $white;
+                img {
+                    filter: invert(100%) sepia(0%) saturate(7494%) hue-rotate(297deg) brightness(105%) contrast(103%);
                 }
             }
         }
