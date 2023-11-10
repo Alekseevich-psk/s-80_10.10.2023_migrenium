@@ -9,7 +9,7 @@
         border-radius: 30px;
         min-height: 500px;
 
-        @media(max-width: 960px) {
+        @media (max-width: 960px) {
             border-radius: 12px;
             min-height: 300px;
             padding: 40px 12px;
@@ -23,7 +23,20 @@
         flex-wrap: wrap;
         margin-bottom: 30px;
 
-        @media(max-width: 768px) {
+        &--header {
+            @media (max-width: 768px) {
+                flex-direction: column;
+                align-items: start;
+            }
+
+            .article__inner--date {
+                @media (max-width: 768px) {
+                    order: -1;
+                }
+            }
+        }
+
+        @media (max-width: 768px) {
             margin-bottom: 20px;
         }
     }
@@ -33,14 +46,51 @@
     }
 
     &__date {
+        cursor: default;
+        position: relative;
         font-weight: 300;
         line-height: 100%;
         font-size: 24px;
-        margin-bottom: 30px;
+        opacity: 0.6;
+        transition: $transition;
 
-        @media(max-width: 768px) {
+        &:hover {
+            opacity: 1;
+
+
+            &::after {
+                content: attr(data-title);
+                position: absolute;
+                top: 100%;
+                right: 0;
+                width: 120px;
+                text-align: right;
+                font-size: 14px;
+
+            }
+
+            @media (max-width: 768px) {
+                &::after {
+                    text-align: left;
+                    top: 0;
+                    right: -130px;
+                    opacity: 0.7;
+                }
+            }
+        }
+
+        @media (max-width: 768px) {
             font-size: 18px;
-            margin-bottom: 20px;
+        }
+    }
+
+    .categories__link {
+        color: $black;
+        border-color: $black;
+
+        &:hover {
+            color: $white;
+            border-color: $active;
         }
     }
 }
