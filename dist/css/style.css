@@ -2485,6 +2485,80 @@ a {
   }
 }
 
+.confidentiality {
+  position: fixed;
+  border-radius: 32px;
+  background: rgba(255, 255, 255, 0.7);
+  -webkit-backdrop-filter: blur(2px);
+          backdrop-filter: blur(2px);
+  padding: 40px;
+  bottom: 40px;
+  left: 40px;
+  z-index: 100;
+}
+@media (max-width: 1740px) {
+  .confidentiality {
+    bottom: 20px;
+    left: 20px;
+  }
+}
+@media (max-width: 960px) {
+  .confidentiality {
+    bottom: 10px;
+    left: 10px;
+  }
+}
+.confidentiality.hide {
+  display: none;
+}
+@media (max-width: 960px) {
+  .confidentiality {
+    width: calc(100% - 20px);
+  }
+}
+@media (max-width: 768px) {
+  .confidentiality {
+    padding: 20px;
+    border-radius: 20px;
+  }
+}
+.confidentiality__text {
+  font-family: "Oswald", Arial, Helvetica, sans-serif;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+  color: #3D3D3D;
+}
+@media (max-width: 768px) {
+  .confidentiality__text {
+    font-size: 16px;
+  }
+}
+.confidentiality__align {
+  padding-top: 20px;
+}
+.confidentiality__link {
+  cursor: pointer;
+  font-family: "Oswald", Arial, Helvetica, sans-serif;
+  font-size: 24px;
+  color: #3D3D3D;
+  text-decoration: underline;
+}
+@media (max-width: 768px) {
+  .confidentiality__link {
+    display: block;
+    font-size: 16px;
+  }
+}
+@media (max-width: 768px) {
+  .confidentiality__button {
+    width: 100%;
+    font-size: 16px;
+    padding: 12px 0;
+  }
+}
+
 .main {
   position: relative;
   margin: 0 auto;

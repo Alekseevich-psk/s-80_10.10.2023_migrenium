@@ -33,6 +33,20 @@
 "use strict";
 
 (function () {
+  var confidentiality = document.querySelector(".confidentiality");
+  if (!confidentiality) return;
+  if (localStorage.confidentiality === "ok") {
+    return confidentiality.classList.add("hide");
+  }
+  var btn = confidentiality.querySelector(".confidentiality__button");
+  btn.addEventListener("click", function () {
+    confidentiality.classList.add("hide");
+    localStorage.setItem("confidentiality", "ok");
+  });
+})();
+"use strict";
+
+(function () {
   var header = document.querySelector(".header");
   if (!header) return;
   var classHeaderScroll = "scroll";

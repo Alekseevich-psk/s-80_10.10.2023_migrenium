@@ -1,0 +1,72 @@
+.confidentiality {
+    position: fixed;
+    border-radius: 32px;
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(2px);
+    padding: 40px;
+    
+    bottom: 40px;
+    left: 40px;
+    z-index: 100;
+
+    @media (max-width: 1740px) {
+        bottom: 20px;
+        left: 20px;
+    }
+
+    @media (max-width: 960px) {
+        bottom: 10px;
+        left: 10px;
+    }
+
+    &.hide {
+        display: none;
+    }
+
+    @media (max-width: 960px) {
+        width: calc(100% - 20px);
+    }
+
+    @media (max-width: 768px) {
+        padding: 20px;
+        border-radius: 20px;
+    }
+
+    &__text {
+        font-family: "Oswald", Arial, Helvetica, sans-serif;
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 300;
+        line-height: normal;
+        color: $black;
+
+        @media (max-width: 768px) {
+            font-size: 16px;
+        }
+    }
+
+    &__align {
+        padding-top: 20px;
+    }
+
+    &__link {
+        cursor: pointer;
+        font-family: "Oswald", Arial, Helvetica, sans-serif;
+        font-size: 24px;
+        color: $black;
+        text-decoration: underline;
+
+        @media (max-width: 768px) {
+            display: block;
+            font-size: 16px;
+        }
+    }
+
+    &__button {
+        @media (max-width: 768px) {
+            width: 100%;
+            font-size: 16px;
+            padding: 12px 0;
+        }
+    }
+}
