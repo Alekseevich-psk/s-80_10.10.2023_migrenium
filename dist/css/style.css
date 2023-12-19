@@ -2584,14 +2584,10 @@ a {
   }
 }
 .main__video {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: calc(100% - 80px);
-  height: calc(100% - 80px);
-  -webkit-transform: translate(-50%, -50%);
-      -ms-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
+  position: relative;
+  height: 1000px;
+  margin-top: 20px;
+  width: 100%;
   overflow: hidden;
 }
 @media (max-width: 1740px) {
