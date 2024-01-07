@@ -1157,6 +1157,10 @@ body {
   scroll-behavior: smooth;
 }
 
+body.overflow {
+  overflow: hidden;
+}
+
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -1225,6 +1229,9 @@ a {
   background-image: url("../images/logo.svg");
 }
 
+.header {
+  position: relative;
+}
 .header__body {
   position: fixed;
   z-index: 100;
@@ -1489,7 +1496,10 @@ a {
   height: auto;
 }
 .menu__btn {
+  position: relative;
   display: none;
+  top: auto;
+  right: auto;
   width: 52px;
   height: 52px;
   background-color: #fff;
@@ -1762,6 +1772,7 @@ a {
   -webkit-transition: 0.1s;
   -o-transition: 0.1s;
   transition: 0.1s;
+  display: none;
 }
 .preloader.hide {
   opacity: 0;
@@ -2584,10 +2595,15 @@ a {
   }
 }
 .main__video {
-  position: relative;
-  height: 1000px;
-  margin-top: 20px;
-  width: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: calc(100% - 80px);
+  height: calc(100% - 80px);
+  border: 1px solid gray;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
   overflow: hidden;
 }
 @media (max-width: 1740px) {

@@ -10,20 +10,22 @@
     const videoMobile = main.querySelector("#video-mobile");
     const arrVideo = [videoDesktop, videoMobile];
 
-    arrVideo.forEach((video, index) => {
-        video.oncanplay = () => {
+    window.onload = function () {
+        arrVideo.forEach((video, index) => {
             video.play();
             sliderPlay();
-        };
+    
+            video.onended = () => {
+                video.pause();
+                if (index === 0) {
+                    video.currentTime = 17;
+                    video.play();
+                }
+            };
+        });
+    };
 
-        video.onended = () => {
-            video.pause();
-            if (index === 0) {
-                video.currentTime = 17;
-                video.play();
-            }
-        };
-    });
+
 
     function sliderPlay() {
         let activeIndex = 0;

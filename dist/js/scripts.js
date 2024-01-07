@@ -78,11 +78,13 @@
 "use strict";
 
 (function () {
-  var menu = document.querySelector('.menu');
+  var menu = document.querySelector(".menu");
   if (!menu) return;
-  var btnMenu = menu.querySelector('.menu__btn');
-  btnMenu.addEventListener('click', function (e) {
-    menu.classList.toggle('active');
+  var btnMenu = menu.querySelector(".menu__btn");
+  var body = document.querySelector("body");
+  btnMenu.addEventListener("click", function (e) {
+    menu.classList.toggle("active");
+    body.classList.toggle("overflow");
   });
 })();
 "use strict";
@@ -105,19 +107,19 @@ document.addEventListener("DOMContentLoaded", function () {
   var videoDesktop = main.querySelector("#video-desktop");
   var videoMobile = main.querySelector("#video-mobile");
   var arrVideo = [videoDesktop, videoMobile];
-  arrVideo.forEach(function (video, index) {
-    video.oncanplay = function () {
+  window.onload = function () {
+    arrVideo.forEach(function (video, index) {
       video.play();
       sliderPlay();
-    };
-    video.onended = function () {
-      video.pause();
-      if (index === 0) {
-        video.currentTime = 17;
-        video.play();
-      }
-    };
-  });
+      video.onended = function () {
+        video.pause();
+        if (index === 0) {
+          video.currentTime = 17;
+          video.play();
+        }
+      };
+    });
+  };
   function sliderPlay() {
     var activeIndex = 0;
     var timerId;

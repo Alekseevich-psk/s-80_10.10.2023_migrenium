@@ -10,6 +10,12 @@ body {
     scroll-behavior: smooth;
 }
 
+body {
+    &.overflow {
+        overflow: hidden;
+    }
+}
+
 * {
     box-sizing: border-box;
 }
