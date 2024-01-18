@@ -82,9 +82,21 @@
   if (!menu) return;
   var btnMenu = menu.querySelector(".menu__btn");
   var body = document.querySelector("body");
+  var links = document.querySelectorAll(".menu__link");
   btnMenu.addEventListener("click", function (e) {
     menu.classList.toggle("active");
     body.classList.toggle("overflow");
+  });
+  function removeClass(elem, value) {
+    if (elem.classList.contains(value)) {
+      elem.classList.remove(value);
+    }
+  }
+  links.forEach(function (link) {
+    link.addEventListener("click", function () {
+      removeClass(menu, "active");
+      removeClass(body, "overflow");
+    });
   });
 })();
 "use strict";
@@ -107,19 +119,7 @@ document.addEventListener("DOMContentLoaded", function () {
   var videoDesktop = main.querySelector("#video-desktop");
   var videoMobile = main.querySelector("#video-mobile");
   var arrVideo = [videoDesktop, videoMobile];
-  window.onload = function () {
-    arrVideo.forEach(function (video, index) {
-      video.play();
-      sliderPlay();
-      video.onended = function () {
-        video.pause();
-        if (index === 0) {
-          video.currentTime = 17;
-          video.play();
-        }
-      };
-    });
-  };
+  var media = window.innerWidth;
   function sliderPlay() {
     var activeIndex = 0;
     var timerId;
@@ -135,6 +135,26 @@ document.addEventListener("DOMContentLoaded", function () {
       activeIndex++;
     }, speed);
     flagAnim = true;
+  }
+  function init() {
+    if (media >= 769) {
+      videoDesktop.play();
+      videoDesktop.onended = function () {
+        videoDesktop.pause();
+        videoDesktop.currentTime = 17;
+        videoDesktop.play();
+      };
+    } else {
+      videoMobile.play();
+    }
+    sliderPlay();
+  }
+  if (document.readyState === "complete") {
+    init();
+  } else {
+    window.addEventListener("load", function () {
+      init();
+    });
   }
 })();
 "use strict";

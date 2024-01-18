@@ -9,23 +9,7 @@
     const videoDesktop = main.querySelector("#video-desktop");
     const videoMobile = main.querySelector("#video-mobile");
     const arrVideo = [videoDesktop, videoMobile];
-
-    window.onload = function () {
-        arrVideo.forEach((video, index) => {
-            video.play();
-            sliderPlay();
-    
-            video.onended = () => {
-                video.pause();
-                if (index === 0) {
-                    video.currentTime = 17;
-                    video.play();
-                }
-            };
-        });
-    };
-
-
+    let media = window.innerWidth;
 
     function sliderPlay() {
         let activeIndex = 0;
@@ -47,5 +31,28 @@
         }, speed);
 
         flagAnim = true;
+    }
+
+    function init() {
+        if (media >= 769) {
+            videoDesktop.play();
+            videoDesktop.onended = () => {
+                videoDesktop.pause();
+                videoDesktop.currentTime = 17;
+                videoDesktop.play();
+            };
+        } else {
+            videoMobile.play();
+        }
+
+        sliderPlay();
+    }
+
+    if (document.readyState === "complete") {
+        init();
+    } else {
+        window.addEventListener("load", () => {
+            init();
+        });
     }
 })();
