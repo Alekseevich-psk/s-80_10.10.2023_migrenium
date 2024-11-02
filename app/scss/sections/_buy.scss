@@ -1,5 +1,10 @@
 .buy {
 
+    &__slider {
+        overflow: hidden;
+        padding: 12px;
+    }
+
     &__description {
         font-size: 26px;
         font-weight: 300;
@@ -11,10 +16,6 @@
         }
     }
 
-    &__sl-arrows {
-        display: none;
-    }
-
     &__sub-wrapper {
         @include sTitle();
         margin-bottom: 32px;
@@ -24,19 +25,13 @@
         }
     }
 
-    &__wrapper {
-        display: flex;
-        justify-content: space-between;
-        flex-wrap: wrap;
-    }
-
     &__slide {
         position: relative;
         border-radius: 30px;
         height: 230px;
         padding: 60px 50px;
         width: calc(92% / 4);
-        box-shadow: $boxShadow;
+        box-shadow:  0 0 12px 0 rgba(207,207,211,.6);
         text-align: center;
         background-color: $white;
 

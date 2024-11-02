@@ -100,3 +100,30 @@
         },
     });
 })();
+
+(function () {
+    const buy = document.querySelector(".buy");
+    if (!buy) return;
+
+    new Swiper(".buy__slider", {
+        spaceBetween: 30,
+        navigation: {
+            nextEl: ".buy .sl-arrows__arrow--next",
+            prevEl: ".buy .sl-arrows__arrow--prev",
+        },
+        breakpoints: {
+            320: {
+                slidesPerView: 1.1,
+                spaceBetween: 20,
+            },
+            960: {
+                slidesPerView: 2.4,
+                spaceBetween: 20,
+            },
+            1280: {
+                slidesPerView: 4,
+                spaceBetween: 24,
+            },
+        },
+    });
+})();

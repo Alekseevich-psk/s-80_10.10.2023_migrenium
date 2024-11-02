@@ -3333,6 +3333,10 @@ a {
   }
 }
 
+.buy__slider {
+  overflow: hidden;
+  padding: 12px;
+}
 .buy__description {
   font-size: 26px;
   font-weight: 300;
@@ -3343,9 +3347,6 @@ a {
   .buy__description {
     font-size: 20px;
   }
-}
-.buy__sl-arrows {
-  display: none;
 }
 .buy__sub-wrapper {
   display: -webkit-box;
@@ -3369,24 +3370,14 @@ a {
     margin-bottom: 20px;
   }
 }
-.buy__wrapper {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-}
 .buy__slide {
   position: relative;
   border-radius: 30px;
   height: 230px;
   padding: 60px 50px;
   width: 23%;
-  -webkit-box-shadow: 0 0 30px 0 rgba(207, 207, 211, 0.6);
-          box-shadow: 0 0 30px 0 rgba(207, 207, 211, 0.6);
+  -webkit-box-shadow: 0 0 12px 0 rgba(207, 207, 211, 0.6);
+          box-shadow: 0 0 12px 0 rgba(207, 207, 211, 0.6);
   text-align: center;
   background-color: #fff;
 }
