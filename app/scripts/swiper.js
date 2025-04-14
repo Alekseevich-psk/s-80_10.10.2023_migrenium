@@ -10,7 +10,7 @@
         },
         breakpoints: {
             320: {
-                slidesPerView: 1.1,
+                slidesPerView: 1,
                 spaceBetween: 20,
             },
             960: {
@@ -36,7 +36,7 @@
         },
         breakpoints: {
             320: {
-                slidesPerView: 1.1,
+                slidesPerView: 1,
                 spaceBetween: 20,
             },
             960: {
@@ -59,7 +59,7 @@
         },
         breakpoints: {
             320: {
-                slidesPerView: 1.1,
+                slidesPerView: 1,
                 spaceBetween: 20,
             },
             960: {
@@ -86,7 +86,7 @@
         },
         breakpoints: {
             320: {
-                slidesPerView: 1.1,
+                slidesPerView: 1,
                 spaceBetween: 20,
             },
             960: {
@@ -113,7 +113,7 @@
         },
         breakpoints: {
             320: {
-                slidesPerView: 1.1,
+                slidesPerView: 1,
                 spaceBetween: 20,
             },
             960: {

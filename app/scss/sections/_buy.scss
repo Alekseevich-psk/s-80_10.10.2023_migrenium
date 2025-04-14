@@ -5,6 +5,22 @@
         padding: 12px;
     }
 
+    &__sl-arrows {
+        @media(max-width: 960px) {
+            display: none;
+        }
+
+        &--mobile {
+            display: none;
+
+            @media(max-width: 960px) {
+                width: 100%;
+                display: flex;
+                justify-content: flex-end;
+            } 
+        }
+    }
+
     &__description {
         font-size: 26px;
         font-weight: 300;
